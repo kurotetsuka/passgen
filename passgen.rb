@@ -3,11 +3,11 @@
 class Passgen
 	attr_accessor :words
 
-	def initialize( filename = "wordlist.txt")
+	def initialize( filename = "data/wordlist.txt")
 		load( filename)
 	end
 
-	def load( filename = "wordlist.txt")
+	def load( filename = "data/wordlist.txt")
 		data = File.read( filename)
 		@words = data.split("\n")
 	end
@@ -41,7 +41,7 @@ class Passgen
 end
 
 if __FILE__ == $0
-	printf( "argv: %s\n", ARGV);
+	#printf( "argv: %s\n", ARGV);
 	#get word count
 	wc = 5
 	if ! ARGV.empty?
