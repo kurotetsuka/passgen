@@ -37,9 +37,9 @@ class Passgen
 		end
 		return result
 	end
-
 end
 
+# main method
 if __FILE__ == $0
 	#printf( "argv: %s\n", ARGV);
 	#get word count
@@ -54,8 +54,10 @@ if __FILE__ == $0
 	passgen = Passgen.new()
 	password = passgen.gen( wc)
 	#print password
+	# add arg to disable this
 	read_enabled = true
 	if read_enabled
 		printf( "password: %s\n", password)
 	end
+	#copy to clipboard
 end
